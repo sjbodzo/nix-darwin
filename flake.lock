@@ -22,14 +22,17 @@
     },
     "dotfiles": {
       "locked": {
-        "lastModified": 1734120735,
-        "narHash": "sha256-cIkpPK3F6NIpu01dZTf0NEvs8V5SoZ/F6u/zEXUzdk0=",
-        "path": "/Users/jessbodzo/forge/dotfiles",
-        "type": "path"
+        "lastModified": 1734119055,
+        "narHash": "sha256-vNk06LrS6i4na/h29FI1KkxeCp28j/rUvZhedYgyXFs=",
+        "owner": "sjbodzo",
+        "repo": "dotfiles",
+        "rev": "00f5f22276be601a0226edc7f9009082bc0f64f9",
+        "type": "github"
       },
       "original": {
-        "path": "/Users/jessbodzo/forge/dotfiles",
-        "type": "path"
+        "owner": "sjbodzo",
+        "repo": "dotfiles",
+        "type": "github"
       }
     },
     "home-manager": {
@@ -75,14 +78,17 @@
     },
     "nix-home-manager": {
       "locked": {
-        "lastModified": 1734120748,
-        "narHash": "sha256-F+6bGgwA1rqe1CynfzRsTFPDkAreePrmkQYIJFou05o=",
-        "path": "/Users/jessbodzo/forge/nix-home-manager",
-        "type": "path"
+        "lastModified": 1734121438,
+        "narHash": "sha256-kSFMM+udg0h/0hYGrbSiiLdy72+9CiwTSww+a9arJSY=",
+        "owner": "sjbodzo",
+        "repo": "nix-home-manager",
+        "rev": "f9a259fdfb5e0e071136dbba483932ac7920eb98",
+        "type": "github"
       },
       "original": {
-        "path": "/Users/jessbodzo/forge/nix-home-manager",
-        "type": "path"
+        "owner": "sjbodzo",
+        "repo": "nix-home-manager",
+        "type": "github"
       }
     },
     "nixpkgs": {

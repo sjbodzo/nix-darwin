@@ -22,10 +22,11 @@
     nixpkgs-locked.url =
       "github:NixOS/nixpkgs/1042fd8b148a9105f3c0aca3a6177fd1d9360ba5";
 
-    #nix-home-manager.url = "github:sjbodzo/nix-home-manager";
-    nix-home-manager.url = "path:/Users/jessbodzo/forge/nix-home-manager";
-    dotfiles.url = "path:/Users/jessbodzo/forge/dotfiles";
-    #dotfiles.url = "github:sjbodzo/dotfiles";
+    #nix-home-manager.url = "path:/Users/jessbodzo/forge/nix-home-manager";
+    #dotfiles.url = "path:/Users/jessbodzo/forge/dotfiles";
+
+    nix-home-manager.url = "github:sjbodzo/nix-home-manager";
+    dotfiles.url = "github:sjbodzo/dotfiles";
   };
 
   outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, darwin, home-manager, nix-home-manager
