@@ -20,7 +20,7 @@
     taps = [ ];
 
     # brew install
-    brews = [ ];
+    brews = [ "openconnect" ];
 
     # brew install --cask
     # these need to be updated manually
