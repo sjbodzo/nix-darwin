@@ -13,6 +13,10 @@
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
 
+    ghostty = {
+      url = "github:ghostty-org/ghostty";
+    };
+
     mkAlias = {
       url = "github:cdmistman/mkAlias";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
@@ -29,7 +33,7 @@
     dotfiles.url = "github:sjbodzo/dotfiles";
   };
 
-  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, darwin, home-manager, nix-home-manager
+  outputs = inputs@{ self, nixpkgs, ghostty, nixpkgs-unstable, darwin, home-manager, nix-home-manager
     , dotfiles, ... }:
     let nixpkgsConfig = {
         config.allowUnfree = true;
@@ -47,6 +51,11 @@
               (final: prev: {
                 unstable =
                   import inputs.nixpkgs-unstable { system = prev.system; };
+              })
+
+              # import from a flake
+              (final: prev: {
+                  ghostty = ghostty.packages.${prev.system}.default;
               })
 
               (final: prev: {

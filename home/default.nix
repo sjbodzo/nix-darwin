@@ -24,6 +24,7 @@ in {
   # https://github.com/NixOS/nixpkgs/blob/master/pkgs/os-specific/darwin/
   home.packages = with pkgs; [
     coreutils
+    # ghostty - lacks flake support for aarch64 darwin
   ];
 
   # TODO hardware.keyboard.zsa.enable
