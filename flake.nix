@@ -33,8 +33,7 @@
     dotfiles.url = "github:sjbodzo/dotfiles";
   };
 
-  outputs = inputs@{ self, nixpkgs, ghostty, nixpkgs-unstable, darwin, home-manager, nix-home-manager
-    , dotfiles, ... }:
+  outputs = inputs@{ self, nixpkgs, ghostty, nixpkgs-unstable, darwin, home-manager, dotfiles, ... }:
     let nixpkgsConfig = {
         config.allowUnfree = true;
     };
