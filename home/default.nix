@@ -26,6 +26,4 @@ in {
     coreutils
     # ghostty - lacks flake support for aarch64 darwin
   ];
-
-  # TODO hardware.keyboard.zsa.enable
 }
