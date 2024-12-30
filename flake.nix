@@ -29,7 +29,7 @@
     dotfiles.url = "github:sjbodzo/dotfiles";
   };
 
-  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, darwin, home-manager, dotfiles, ... }:
+  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, darwin, home-manager, nix-home-manager, dotfiles, ... }:
     let nixpkgsConfig = {
         config.allowUnfree = true;
     };
