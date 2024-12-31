@@ -19,7 +19,7 @@
   # linux builder
   # https://nixcademy.com/2024/02/12/macos-linux-builder/
   # root was here previously, @admin is for linux-builder
-  nix.settings.trusted-users = [ "root" "@admin" ];
+  nix.settings.trusted-users = [ "root" "@admin" "jessbodzo" ];
   # sudo launchctl list org.nixos.linux-builder
   # sudo launchctl stop org.nixos.linux-builder
   # nix.linux-builder = {
