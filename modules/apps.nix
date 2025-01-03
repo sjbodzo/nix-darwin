@@ -20,7 +20,7 @@
     taps = [ ];
 
     # brew install
-    brews = [ "openconnect" "luarocks" "lua-language-server" ];
+    brews = [ "openconnect" "luarocks" "lua-language-server" "sqlcmd" ];
 
     # brew install --cask
     # these need to be updated manually
