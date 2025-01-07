@@ -20,11 +20,11 @@
     taps = [ ];
 
     # brew install
-    brews = [ "openconnect" "luarocks" "lua-language-server" "sqlcmd" ];
+    brews = [ "openconnect" "luarocks" "lua-language-server" "sqlcmd" "cargo-nextest" ];
 
     # brew install --cask
     # these need to be updated manually
-    casks = [ "ghostty" "wezterm" "spotify" "linear-linear" "notion" ];
+    casks = [ "ghostty" "wezterm" "spotify" "linear-linear" "notion" "zed" ];
 
     # mac app store
     masApps = {
