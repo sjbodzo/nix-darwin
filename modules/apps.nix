@@ -17,10 +17,10 @@
       cleanup = "zap";
     };
 
-    taps = [ ];
+    taps = [ "txn2/tap/kubefwd" ];
 
     # brew install
-    brews = [ "openconnect" "luarocks" "lua-language-server" "sqlcmd" "cargo-nextest" "helm" ];
+    brews = [ "openconnect" "luarocks" "lua-language-server" "sqlcmd" "cargo-nextest" "helm" "sshpass" "semgrep"];
 
     # brew install --cask
     # these need to be updated manually
