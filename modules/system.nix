@@ -72,9 +72,6 @@
     stateVersion = 5;
   };
 
-  # touchid for sudo authentication
-  security.pam.enableSudoTouchIdAuth = true;
-
   # create /etc/zshrc that loads the nix-darwin environment,
   # required if you want to use darwin's default shell - zsh
   programs.zsh.enable = true;

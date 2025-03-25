@@ -17,7 +17,7 @@
       cleanup = "zap";
     };
 
-    taps = [ "txn2/tap/kubefwd" ];
+    taps = [ ];
 
     # brew install
     brews = [ "openconnect" "luarocks" "lua-language-server" "sqlcmd" "cargo-nextest" "helm" "sshpass" "semgrep"];

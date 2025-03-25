@@ -3,13 +3,13 @@
 
   # format https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-flake.html#examples
   inputs = {
-    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-24.05-darwin";
-    darwin = {
-      url = "github:lnl7/nix-darwin";
+    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-24.11-darwin";
+    nix-darwin = {
+      url = "github:lnl7/nix-darwin/nix-darwin-24.11";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
 
@@ -29,12 +29,12 @@
     dotfiles.url = "github:sjbodzo/dotfiles";
   };
 
-  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, darwin, home-manager, nix-home-manager, dotfiles, ... }:
+  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, nix-darwin, home-manager, nix-home-manager, dotfiles, ... }:
     let nixpkgsConfig = {
         config.allowUnfree = true;
     };
     in {
-      darwinConfigurations."DTO-A200" = darwin.lib.darwinSystem {
+      darwinConfigurations."DTO-A200" = nix-darwin.lib.darwinSystem {
         system = "aarch64-darwin"; # apple silicon
         specialArgs = { inherit inputs; };
         modules = [
