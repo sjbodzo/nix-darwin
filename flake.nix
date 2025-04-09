@@ -30,10 +30,7 @@
   };
 
   outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, nix-darwin, home-manager, nix-home-manager, dotfiles, ... }:
-    let nixpkgsConfig = {
-        config.allowUnfree = true;
-    };
-    in {
+    {
       darwinConfigurations."DTO-A200" = nix-darwin.lib.darwinSystem {
         system = "aarch64-darwin"; # apple silicon
         specialArgs = { inherit inputs; };
@@ -45,7 +42,15 @@
               # "https://github.com/ne9z/dotfiles-flake/blob/d3159df136294675ccea340623c7c363b3584e0d/configuration.nix"
               (final: prev: {
                 unstable =
-                  import inputs.nixpkgs-unstable { system = prev.system; };
+                  import inputs.nixpkgs-unstable {
+                      config = {
+                          # 1password requires allow broken, but it won't even open
+                          allowBroken = true;
+                          allowUnfree = true;
+                          allowUnfreePredicate = _: true;
+                      };
+                      system = prev.system;
+                  };
               })
 
               (final: prev: {
@@ -68,14 +73,18 @@
           ./modules/host-users.nix
           home-manager.darwinModules.home-manager
           {
-            nixpkgs = nixpkgsConfig;
+            nixpkgs.config = {
+              allowUnfree = true;
+              allowUnfreePredicate = _: true;
+            };
+
+            # make home manager use modified pkgs, not fetch its own
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.jessbodzo = import ./home;
             home-manager.extraSpecialArgs = {
               inherit inputs;
               dotfiles = dotfiles;
-              nixpkgs.config.allowUnfree = true;
             };
           }
         ];
