@@ -24,7 +24,7 @@
 
     # brew install --cask
     # these need to be updated manually
-    casks = [ "ghostty" "wezterm" "spotify" "linear-linear" "notion" "zed" ];
+    casks = [ "ghostty" "wezterm" "linear-linear" "notion" "zed" "xcodes" ];
 
     # mac app store
     masApps = {
