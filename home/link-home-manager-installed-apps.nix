@@ -32,7 +32,6 @@
       # copy some apps to /Applications
       for file in \
           "$HOME/Applications/Wezterm.app" \
-          "$HOME/Applications/Spotify.app" \
         ; do
         existing="/Applications/$(basename "$file")"
         [[ -d "$existing" ]] && echo App already installed, refusing to copy it to /Applications: $existing && continue
