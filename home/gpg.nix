@@ -5,6 +5,10 @@
     package = pkgs.gnupg24;
   };
 
+  services.gpg-agent = {
+    enable = true;
+  };
+
   home.packages = with pkgs; [ pinentry_mac ];
 
   # gnu --batch --import

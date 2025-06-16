@@ -79,11 +79,11 @@
     },
     "nix-home-manager": {
       "locked": {
-        "lastModified": 1748716051,
-        "narHash": "sha256-61c8IgHy4k72NYnvjZdI3pJ212M8kqqehv3ePOhkn9w=",
+        "lastModified": 1749157766,
+        "narHash": "sha256-BN1G70wHXQ9aou2Ich2FXgp3IN3Yg4zauIN+g40yGN4=",
         "owner": "sjbodzo",
         "repo": "nix-home-manager",
-        "rev": "34fdcbce19373d8e3171cfa89f199cf43d6db9a4",
+        "rev": "3c4455c31a4c31a42fe7e9a54f358e2265cc975d",
         "type": "github"
       },
       "original": {
@@ -95,8 +95,8 @@
     "nixpkgs": {
       "locked": {
         "lastModified": 0,
-        "narHash": "sha256-bW0ZaGOErMm7/Tfs+zhmBEURH0OVVT02dHITSDXEPjY=",
-        "path": "/nix/store/0wf1wlqjj7zn6mdskvv919knhwy3gql6-source",
+        "narHash": "sha256-IbqW89GosWV995Lb/9K8Q+FnyCWxF2ekPETvOJLGaiI=",
+        "path": "/nix/store/n6kh9n583nr61lfn3rcssgivw6a7v411-source",
         "type": "path"
       },
       "original": {
