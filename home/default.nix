@@ -8,7 +8,6 @@ in {
   # import sub modules
   imports = [
     ./gpg.nix
-    ./fonts.nix
      ./link-home-manager-installed-apps.nix
     (inputs.nix-home-manager + "/modules")
   ];
