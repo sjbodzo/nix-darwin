@@ -79,11 +79,11 @@
     },
     "nix-home-manager": {
       "locked": {
-        "lastModified": 1751561389,
-        "narHash": "sha256-Ta1iQJz52Bb4BXdKTWpSu1nduU7sJQio8yWCqhDz35Q=",
+        "lastModified": 1751576596,
+        "narHash": "sha256-YIS4fquHcPk0Z6EhQa6EcM9lejMq0AHUmdKn33d/844=",
         "owner": "sjbodzo",
         "repo": "nix-home-manager",
-        "rev": "368914b7eedd495c15fb4bd04c9934fdbe2b9a2c",
+        "rev": "2812f68c636ed75093556bc5bde86868979a43ac",
         "type": "github"
       },
       "original": {

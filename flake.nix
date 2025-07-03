@@ -45,7 +45,18 @@
                 unstable =
                   import inputs.nixpkgs-unstable {
                       config = {
-                          # 1password requires allow broken, but it won't even open
+                          allowBroken = true;
+                          allowUnfree = true;
+                          allowUnfreePredicate = _: true;
+                      };
+                      system = prev.system;
+                  };
+              })
+
+              (final: prev: {
+                master =
+                  import inputs.nixpkgs {
+                      config = {
                           allowBroken = true;
                           allowUnfree = true;
                           allowUnfreePredicate = _: true;
